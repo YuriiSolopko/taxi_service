@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    text-align: center;
+}
+div {
+    margin: 0 auto;
+    width: 50%;
+    background-color: whitesmoke;
+}
+div div {
+    width: 100px;
+    display: inline-block;
+    text-align: right;
+    margin: 2px;
+    padding: 2px;
+}
+div input {
+    width: 150px;
+}
+button {
+    margin: 2px;
+    padding: 2px;
+}
+div table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    /*border-style: hidden;*/
+}
+td {
+    background-color: aquamarine;
+    padding: 3px;
+    border: 2px solid black;
+}
+td+td {
+    background-color: chartreuse;
+    padding: 3px;
+}

@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    text-align: center;
+}
+#main {
+    text-align: center;
+    margin: auto;
+}
+#main input {
+    width: 120px;
+}
+#main span.label {
+    width: 150px;
+    text-align: right;
+}
+.error {
+    width: 300px;
+    color: red;
+    text-align: left;
+}

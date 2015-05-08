@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    text-align: center;
+}
+#main {
+    text-align: center;
+    width: 300px;
+    height: 60px;
+    background-color: whitesmoke;
+    margin: auto;
+}
+#main input {
+    width: 120px;
+}
+.label {
+    width: 120px;
+    text-align: left;
+}
+#tries {
+    width: 100%;
+}
+.error {
+    width: 300px;
+    color: red;
+}
+
+#carlist span{display:block;clear:both;cursor:pointer;}

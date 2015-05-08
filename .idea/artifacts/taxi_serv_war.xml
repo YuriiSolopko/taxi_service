@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="taxi_serv:war">
+    <output-path>$PROJECT_DIR$/taxi_serv/target</output-path>
+    <root id="archive" name="taxi_service_web-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="taxi_serv:war exploded" />
+    </root>
+  </artifact>
+</component>
