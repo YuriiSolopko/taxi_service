@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:weightSum="1">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Доступные заказы:"
+            android:id="@+id/textOrders" android:layout_gravity="center_horizontal" android:textSize="20dp"
+            android:gravity="center" android:textStyle="bold"/>
+    <ListView
+            android:layout_width="match_parent"
+            android:layout_height="343dp"
+            android:id="@+id/orderlist" android:footerDividersEnabled="false"/>
+    <TextView android:layout_width="match_parent" android:layout_height="30dp" android:text="Текущий заказ:"
+              android:id="@+id/textActive" android:textSize="20dp"
+              android:gravity="clip_horizontal|center" android:textStyle="bold"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/activeOrder" android:layout_gravity="center_horizontal" android:gravity="top|left"
+            android:textSize="18dp"/>
+</LinearLayout>
