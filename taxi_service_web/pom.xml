@@ -53,6 +53,31 @@
             <version>${mysql.connector.version}</version>
         </dependency>
 
+        <!--
+        For install Oracle JDBC driver to your local Maven repository, you should exec following commands:
+
+        1) Copy ojdbc6.jar into your user folder /
+
+        2) Set up maven
+        // For Windows
+        set PATH=%PATH%;D:\Java\apache-maven-3.2.5\bin
+        // For Linux
+        export PATH=$PATH:/home/user/install/apache-maven-3.2.1/bin
+
+        3) Set up java
+        set JAVA_HOME=C:\Program Files\Java\jdk1.8.0_25
+
+        4) Check if maven set up
+        mvn -version
+
+        5) Install driver into repo
+        any other steps are not required, only step 5
+        D:\Java\apache-maven-3.2.5\bin\mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc14 -Dversion=10.2.0.5.0 -Dpackaging=jar -Dfile=ojdbc6.jar -DgeneratePom=true
+
+        6) Run maven build
+-->
+        <!-- ORACLE JDBC driver -->
+
         <dependency>
             <groupId>com.oracle</groupId>
             <artifactId>ojdbc14</artifactId>
@@ -233,6 +258,50 @@
             <version>5.1.3.Final</version>
         </dependency>
 
+        <!-- Used by Hibernate + JPA
+         http://stackoverflow.com/questions/15168365/why-is-hibernate-4-2-using-jandex-and-classmate-if-its-maven-pom-defines-them-as -->
+        <!--        <dependency>
+                    <groupId>com.fasterxml</groupId>
+                    <artifactId>classmate</artifactId>
+                    <version>1.1.0</version>
+                </dependency>
+
+                <dependency>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                    <artifactId>jackson-core</artifactId>
+                    <version>2.5.0</version>
+                </dependency>
+
+                <dependency>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                    <artifactId>jackson-databind</artifactId>
+                    <version>2.5.0</version>
+                </dependency>
+
+                <dependency>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                    <artifactId>jackson-annotations</artifactId>
+                    <version>2.5.0</version>
+                </dependency>
+
+                <dependency>
+                    <groupId>net.sf.ehcache</groupId>
+                    <artifactId>ehcache</artifactId>
+                    <version>${ehcache.version}</version>
+                </dependency>-->
+
+        <!--        <dependency>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-jms</artifactId>
+                    <version>${spring.version}</version>
+                </dependency>
+
+                <dependency>
+                    <groupId>org.apache.activemq</groupId>
+                    <artifactId>activemq-all</artifactId>
+                    <version>5.4.2</version>
+                </dependency>-->
+
         <dependency>
             <groupId>org.apache.xbean</groupId>
             <artifactId>xbean-spring</artifactId>
@@ -282,7 +351,21 @@
                     </execution>
                 </executions>
             </plugin>
-
+            <!--
+                        <plugin>
+                            <groupId>org.scala-tools</groupId>
+                            <artifactId>maven-scala-plugin</artifactId>
+                            <version>2.15.2</version>
+                            <executions>
+                                <execution>
+                                    <goals>
+                                        <goal>compile</goal>
+                                        <goal>testCompile</goal>
+                                    </goals>
+                                </execution>
+                            </executions>
+                        </plugin>
+            -->
         </plugins>
     </build>
 
