@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="taxi_service_web:war exploded">
-    <output-path>$PROJECT_DIR$/taxi_service_web/target/taxi_service_web-1.0-SNAPSHOT</output-path>
+    <output-path>$PROJECT_DIR$/out/artifacts/taxi_service_web_war_exploded</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -61,10 +61,7 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.4.0" />
         </element>
       </element>
-      <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/taxi_service_web/target/MANIFEST.MF" />
-      </element>
-      <element id="javaee-facet-resources" facet="taxi_serv/web/Web" />
+      <element id="javaee-facet-resources" facet="taxi_service_web/web/Web" />
     </root>
   </artifact>
 </component>
