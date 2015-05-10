@@ -14,6 +14,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.SocketTimeoutException;
 import java.net.URL;
 import java.util.concurrent.ExecutionException;
 
@@ -46,6 +47,8 @@ public class MainActivity extends Activity {
                         Intent intent = new Intent(instance, OrderList.class);
                         intent.putExtra("driver_id", driverId.getText().toString());
                         startActivity(intent);
+                    } else if(result.equals("timeout")) {
+                        Toast.makeText(instance, "Connection timeout, try again later" , Toast.LENGTH_LONG).show();
                     } else {
                         Toast.makeText(instance, "Authorization failed" , Toast.LENGTH_LONG).show();
                     }
@@ -72,10 +75,13 @@ public class MainActivity extends Activity {
 
             try {
                 URL url = new URL(urls[0]);
-                HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                conn.setConnectTimeout(3000);
                 BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                 String str = br.readLine();
                 return str;
+            } catch (SocketTimeoutException se) {
+                return "timeout";
             } catch (IOException e) {
                 e.printStackTrace();
             }

@@ -136,6 +136,7 @@ public class OrderList extends Activity {
             try {
                 URL url = new URL(urls[0]);
                 HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+                conn.setConnectTimeout(5000);
                 BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                 List<String> orders = new ArrayList<String>();
                 String str;
@@ -159,6 +160,7 @@ public class OrderList extends Activity {
             try {
                 url = new URL(urls[0]);
                 HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+                conn.setConnectTimeout(5000);
                 BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                 return br.readLine();
             } catch (MalformedURLException e) {
@@ -179,6 +181,7 @@ public class OrderList extends Activity {
             try {
                 url = new URL(urls[0]);
                 HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+                conn.setConnectTimeout(5000);
                 BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                 return br.readLine();
             } catch (MalformedURLException e) {
