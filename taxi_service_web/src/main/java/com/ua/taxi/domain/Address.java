@@ -33,7 +33,12 @@ public class Address {
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "addressTo")
     @Fetch(FetchMode.SELECT)
     @JsonManagedReference
-    private Set<Order> ordersSet;
+    private Set<Order> ordersSetTo;
+
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "addressFrom")
+    @Fetch(FetchMode.SELECT)
+    @JsonManagedReference
+    private Set<Order> ordersSetFrom;
 
     public Address() {
     }

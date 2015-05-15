@@ -27,18 +27,21 @@ public class Operator {
     @Column(name = "PASS_EXPIRE_DATE")
     private Calendar passExpireDate;
 
-    @Column(name = "ID")
-    private String id;
-
     public Operator() {
     }
 
-    public Operator(String login, String password, String id) {
+    public Operator(String login, String password) {
         this.setLogin(login);
         this.setPassword(password);
         Calendar instance = Calendar.getInstance();
         this.passExpireDate = new GregorianCalendar(instance.get(Calendar.YEAR), instance.get(Calendar.MONTH) + 3, instance.get(Calendar.DAY_OF_MONTH));
-        this.setId(id);
+    }
+
+    public Operator(String login, String password, Calendar passExpireDate) {
+        this.setLogin(login);
+        this.setPassword(password);
+        Calendar instance = Calendar.getInstance();
+        this.passExpireDate = passExpireDate;
     }
 
     @Override
@@ -78,11 +81,4 @@ public class Operator {
         this.operatorId = operatorId;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 }

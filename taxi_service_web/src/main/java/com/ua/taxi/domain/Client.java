@@ -29,9 +29,6 @@ public class Client {
     @Column(name = "PHONE_NUMBER")
     private String phoneNumber;
 
-    @Column(name = "ADDRESS")
-    private String address;
-
     @Column(name = "SUM")
     private Integer sum;
 
@@ -45,11 +42,10 @@ public class Client {
     public Client() {
     }
 
-    public Client(String name, String surname, String phone, String address) {
+    public Client(String name, String surname, String phone) {
         this.firstName = name;
         this.lastName = surname;
         this.phoneNumber = phone;
-        this.address = address;
     }
 
     @Override
@@ -94,14 +90,6 @@ public class Client {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
     }
 
     public Integer getSum() {

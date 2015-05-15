@@ -1,0 +1,7 @@
+div.row {
+    margin: 5px auto;
+}
+
+.well .input-group-addon {
+    width: 150px;
+}

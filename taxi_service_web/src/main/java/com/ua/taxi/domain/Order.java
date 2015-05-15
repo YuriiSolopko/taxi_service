@@ -28,21 +28,15 @@ public class Order {
     @Column(name = "SUM")
     private Integer sum;
 
-    //@Column(name = "ADDRESS_FROM")
-    //private String addressFrom;
-
     @ManyToOne
     @JsonBackReference
     private Address addressFrom;
-
-    //@Column(name = "ADDRESS_TO")
-    //private String addressTo;
 
     @ManyToOne
     @JsonBackReference
     private Address addressTo;
 
-    //новый - new, забронирован - reserved, активный,забраный - active,
+    //новый - new, (забронирован - reserved,) активный,забраный - active,
     // отменен -canceled, executed - выполненый
     @Column(name="ORDER_TYPE")
     private String orderType;

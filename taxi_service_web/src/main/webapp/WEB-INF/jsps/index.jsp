@@ -13,10 +13,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Taxi service</title>
 
     <!-- Bootstrap -->
     <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/index.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -27,7 +28,71 @@
 </head>
 <body>
 <div class="container">
-    <h1>Hello, world!</h1>
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-4">
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">Login</span>
+                <input type="text" class="form-control" placeholder="Enter login" aria-describedby="basic-addon1">
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-4">
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon2">Password</span>
+                <input type="text" class="form-control" placeholder="Enter password" aria-describedby="basic-addon2">
+            </div>
+        </div>
+        <div class="col-lg-1 col-md-1 col-sm-1">
+            <button class="btn btn-default">Enter</button>
+        </div>
+        <div class="col-lg-offset-3 col-lg-2 col-md-offset-2 col-md-3 col-sm-offset-0 col-sm-3">
+            <a href="#reg-spoiler" class="btn btn-info" data-toggle="collapse">Register new operator</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-0 col-sm-12 text-center">
+            <div class="collapse" id="reg-spoiler">
+                <div class="well">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-8">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="login-addon">Login</span>
+                                <input type="text" class="form-control" placeholder="Enter login" aria-describedby="login-addon">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-4" id="login-err">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-8">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="password-addon">Password</span>
+                                <input type="text" class="form-control" placeholder="Enter password" aria-describedby="password-addon">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-4" id="pass-err">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-8">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="passconf-addon">Confirm password</span>
+                                <input type="text" class="form-control" placeholder="Confirm password" aria-describedby="passconf-addon">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-4" id="passconf-err">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-6 text-center">
+                            <button class="btn btn-primary">Register</button>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 text-left text-info" id="regMessage"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="/images/taxi.jpg" class="img-responsive img-rounded center-block"/>
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
