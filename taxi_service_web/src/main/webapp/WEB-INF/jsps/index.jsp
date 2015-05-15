@@ -54,40 +54,45 @@
             <div class="collapse" id="reg-spoiler">
                 <div class="well">
                     <div class="row">
-                        <div class="col-md-6 col-sm-8">
+                        <div class="col-md-6 col-sm-7">
                             <div class="input-group">
                                 <span class="input-group-addon" id="login-addon">Login</span>
                                 <input type="text" class="form-control" placeholder="Enter login" aria-describedby="login-addon" id="login">
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-4 text-danger" id="login-err">
+                        <div class="col-md-6 col-sm-5 text-left">
+                            <h4><span class="label label-danger" id="login-err"></span></h4>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 col-sm-8">
+                        <div class="col-md-6 col-sm-7">
                             <div class="input-group">
                                 <span class="input-group-addon" id="password-addon">Password</span>
                                 <input type="password" class="form-control" placeholder="Enter password" aria-describedby="password-addon" id="password">
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-4 text-danger" id="pass-err">
+                        <div class="col-md-6 col-sm-5 text-left">
+                            <h4><span class="label label-danger" id="pass-err"></span></h4>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 col-sm-8">
+                        <div class="col-md-6 col-sm-7">
                             <div class="input-group">
                                 <span class="input-group-addon" id="passconf-addon">Confirm password</span>
                                 <input type="password" class="form-control" placeholder="Confirm password" aria-describedby="passconf-addon" id="passconf">
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-4 text-danger" id="passconf-err">
+                        <div class="col-md-6 col-sm-5 text-left">
+                            <h4><span class="label label-danger" id="passconf-err"></span></h4>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-6 text-center">
                             <button class="btn btn-primary" onclick="registerOperator()">Register</button>
                         </div>
-                        <div class="col-md-6 col-sm-6 col-xs-6 text-left text-info" id="regMessage"></div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 text-left">
+                            <h4><span class="label label-info"  id="regMessage"></span></h4>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -30,17 +30,9 @@ public class Operator {
     public Operator() {
     }
 
-    public Operator(String login, String password) {
-        this.setLogin(login);
-        this.setPassword(password);
-        Calendar instance = Calendar.getInstance();
-        this.passExpireDate = new GregorianCalendar(instance.get(Calendar.YEAR), instance.get(Calendar.MONTH) + 3, instance.get(Calendar.DAY_OF_MONTH));
-    }
-
     public Operator(String login, String password, Calendar passExpireDate) {
         this.setLogin(login);
         this.setPassword(password);
-        Calendar instance = Calendar.getInstance();
         this.passExpireDate = passExpireDate;
     }
 

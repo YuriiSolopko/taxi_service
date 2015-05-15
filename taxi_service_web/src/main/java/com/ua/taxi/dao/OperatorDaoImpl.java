@@ -35,7 +35,7 @@ public class OperatorDaoImpl implements OperatorDao {
     @Override
     public Operator readByLogin(String login) {
         return (Operator) sessionFactory.getCurrentSession().createCriteria(Operator.class)
-                .add(Restrictions.eq("login", login.toLowerCase())).uniqueResult();
+                .add(Restrictions.eq("login", login)).uniqueResult();
     }
 
     @Override

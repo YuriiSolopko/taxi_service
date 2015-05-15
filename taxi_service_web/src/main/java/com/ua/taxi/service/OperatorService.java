@@ -5,4 +5,6 @@ package com.ua.taxi.service;
  */
 public interface OperatorService {
 
+    boolean registerOperator(String login, String password);
+    boolean operatorLoginCheck(String login);
 }

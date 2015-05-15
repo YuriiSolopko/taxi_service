@@ -4,8 +4,7 @@ import com.ua.taxi.service.OperatorService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by White Queen on 10.05.2015.
@@ -19,8 +18,20 @@ public class MainController {
     private OperatorService operatorService;
 
     @RequestMapping(value = "/", method = {RequestMethod.GET, RequestMethod.HEAD})
-    public String registration() {
+    public String index() {
         log.info("/index.html controller");
         return "index";
+    }
+
+    @RequestMapping(value = "/operatorLoginCheck", method = RequestMethod.GET)
+    public @ResponseBody boolean operatorLoginCheck(@RequestParam String login) {
+        log.info("/operatorLoginCheck controller");
+        return operatorService.operatorLoginCheck(login);
+    }
+
+    @RequestMapping(value = "/registerOperator", method = RequestMethod.POST)
+    public @ResponseBody boolean registerOperator(@RequestParam String login, @RequestParam String password) {
+        log.info("/registerOperator controller");
+        return operatorService.registerOperator(login, password);
     }
 }
