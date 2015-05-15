@@ -18,6 +18,7 @@
     <!-- Bootstrap -->
     <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/index.css" rel="stylesheet">
+    <script src="/js/index.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -56,35 +57,35 @@
                         <div class="col-md-6 col-sm-8">
                             <div class="input-group">
                                 <span class="input-group-addon" id="login-addon">Login</span>
-                                <input type="text" class="form-control" placeholder="Enter login" aria-describedby="login-addon">
+                                <input type="text" class="form-control" placeholder="Enter login" aria-describedby="login-addon" id="login">
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-4" id="login-err">
+                        <div class="col-md-6 col-sm-4 text-danger" id="login-err">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-sm-8">
                             <div class="input-group">
                                 <span class="input-group-addon" id="password-addon">Password</span>
-                                <input type="text" class="form-control" placeholder="Enter password" aria-describedby="password-addon">
+                                <input type="password" class="form-control" placeholder="Enter password" aria-describedby="password-addon" id="password">
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-4" id="pass-err">
+                        <div class="col-md-6 col-sm-4 text-danger" id="pass-err">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-sm-8">
                             <div class="input-group">
                                 <span class="input-group-addon" id="passconf-addon">Confirm password</span>
-                                <input type="text" class="form-control" placeholder="Confirm password" aria-describedby="passconf-addon">
+                                <input type="password" class="form-control" placeholder="Confirm password" aria-describedby="passconf-addon" id="passconf">
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-4" id="passconf-err">
+                        <div class="col-md-6 col-sm-4 text-danger" id="passconf-err">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-6 text-center">
-                            <button class="btn btn-primary">Register</button>
+                            <button class="btn btn-primary" onclick="registerOperator()">Register</button>
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-6 text-left text-info" id="regMessage"></div>
                     </div>
