@@ -5,3 +5,11 @@ div.row {
 .well .input-group-addon {
     width: 150px;
 }
+.container {
+    height: 800px;
+    background: url(/images/taxi.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

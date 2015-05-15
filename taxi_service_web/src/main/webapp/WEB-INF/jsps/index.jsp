@@ -98,7 +98,7 @@
             </div>
         </div>
     </div>
-    <img src="/images/taxi.jpg" class="img-responsive img-rounded center-block"/>
+    <%--<img src="/images/taxi.jpg" class="img-responsive img-rounded center-block"/>--%>
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
