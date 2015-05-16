@@ -36,4 +36,19 @@ public class OperatorServiceImpl implements OperatorService {
         Operator operator = operatorDao.readByLogin(login.toLowerCase());
         return operator == null;
     }
+
+    @Override
+    public boolean authenticate(String login, String password) {
+        return operatorDao.authenticate(login.toLowerCase(), password);
+    }
+
+    @Override
+    public boolean isExpiredPass(String login) {
+        return operatorDao.isExpiredPass(login.toLowerCase());
+    }
+
+    @Override
+    public Operator readByLogin(String login) {
+        return operatorDao.readByLogin(login.toLowerCase());
+    }
 }

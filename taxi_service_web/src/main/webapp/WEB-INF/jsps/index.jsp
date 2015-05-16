@@ -33,17 +33,17 @@
         <div class="col-lg-3 col-md-3 col-sm-4">
             <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1">Login</span>
-                <input type="text" class="form-control" placeholder="Enter login" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" placeholder="Enter login" aria-describedby="basic-addon1" id="operLogin">
             </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-4">
             <div class="input-group">
                 <span class="input-group-addon" id="basic-addon2">Password</span>
-                <input type="text" class="form-control" placeholder="Enter password" aria-describedby="basic-addon2">
+                <input type="password" class="form-control" placeholder="Enter password" aria-describedby="basic-addon2" id="operPassword">
             </div>
         </div>
         <div class="col-lg-1 col-md-1 col-sm-1">
-            <button class="btn btn-default">Enter</button>
+            <button class="btn btn-default" onclick="authOperator()">Enter</button>
         </div>
         <div class="col-lg-offset-3 col-lg-2 col-md-offset-2 col-md-3 col-sm-offset-0 col-sm-3">
             <a href="#reg-spoiler" class="btn btn-info" data-toggle="collapse">Register new operator</a>

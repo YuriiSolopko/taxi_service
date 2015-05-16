@@ -102,3 +102,23 @@ function registerOperator() {
         });
     }
 }
+
+function authOperator() {
+    var login = $('#operLogin');
+    var password = $('#operPassword');
+    $.ajax({
+        url: '/authOperator',
+        data: 'login=' + login.val() + '&password=' + password.val(),
+        type: 'POST',
+        success: function(res) {
+            if (res == 'index') {
+                alert('Invalid login or password');
+            } else {
+                window.location = '/' + res + '.html';
+            }
+        },
+        error: function(event,xhr,options,exc) {
+            alert(event + ' ' + xhr + ' ' + options + ' ' + exc);
+        }
+    });
+}
