@@ -19,7 +19,7 @@
     <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/font-awesome.css" rel="stylesheet">
     <link href="/css/dashboard.css" rel="stylesheet">
-
+    <script src="/js/dashboard.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -78,14 +78,14 @@
                     </div>
                     <div class="tab-pane fade" id="regions">
                         <div class="list-group">
-                            <a class="list-group-item" href="#orders-create" data-toggle="tab"><i class="fa fa-plus-square fa-fw"></i>&nbsp; Add region</a>
-                            <a class="list-group-item" href="#orders-show" data-toggle="tab"><i class="fa fa-table fa-fw"></i>&nbsp; Show regions</a>
+                            <a class="list-group-item" href="#regions-create" data-toggle="tab"><i class="fa fa-plus-square fa-fw"></i>&nbsp; Add region</a>
+                            <a class="list-group-item" href="#regions-show" data-toggle="tab" onclick="getRegions()"><i class="fa fa-table fa-fw"></i>&nbsp; Show regions</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-10">
-                <br>
+
                 <div class="tab-content">
                     <div class="tab-pane fade" id="orders-create">
                         <div class="list-group">
@@ -98,7 +98,26 @@
                     <div class="tab-pane fade" id="orders-show">
                         <p>3</p>
                     </div>
+                    <div class="tab-pane fade" id="regions-create">
+                        <h3><span class="label label-default">Add new region</span></h3>
+                        <div class="input-group col-xs-4">
+                            <input type="text" class="form-control" placeholder="Region name">
+                            <span class="input-group-btn"><button class="btn btn-default" type="button">Add</button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="regions-show">
+                        <br>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Regions list</div>
+                            <!-- Table -->
+                            <table class="table" id="region-list">
+
+                            </table>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
