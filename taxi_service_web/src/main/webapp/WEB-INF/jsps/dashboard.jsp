@@ -31,10 +31,10 @@
 
     <div class="container">
         <div class="row my-bar">
-            <div class="col-lg-2 text-center">
+            <div class="col-lg-2 col-md-3 col-sm-3 text-center">
                 <a class="btn btn-default btn-lg" href="/"><i class="fa fa-home fa-lg"></i></a>
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-8 col-md-7 col-sm-8">
                 <ul class="nav nav-pills">
                     <li class="active"><a href="#orders" data-toggle="tab">Orders</a></li>
                     <li><a href="#clients" data-toggle="tab">Clients</a></li>
@@ -43,12 +43,17 @@
                     <li><a href="#regions" data-toggle="tab">Regions</a></li>
                 </ul>
             </div>
-            <div class="col-lg-2 text-right">
+            <div class="col-lg-2 col-md-2 col-sm-1 text-left">
                 <h4><span class="label-info label">Operator: <c:out value="${operator.login}"/></span></h4>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-2 my-menu">
+            <div class="col-xs-12">
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2 col-md-3 col-sm-3 my-menu">
                 <br>
                 <div class="tab-content">
                     <div class="tab-pane active fade in" id="orders">
@@ -84,7 +89,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-10">
+            <div class="col-lg-10 col-md-9 col-sm-9">
 
                 <div class="tab-content">
                     <div class="tab-pane fade" id="orders-create">
@@ -101,20 +106,18 @@
                     <div class="tab-pane fade" id="regions-create">
                         <h3><span class="label label-default">Add new region</span></h3>
                         <div class="input-group col-xs-4">
-                            <input type="text" class="form-control" placeholder="Region name">
-                            <span class="input-group-btn"><button class="btn btn-default" type="button">Add</button>
+                            <input type="text" class="form-control" placeholder="Region name" id="region-name">
+                            <span class="input-group-btn"><button class="btn btn-default" type="button" onclick="addRegion()">Add</button>
                             </span>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="regions-show">
-                        <br>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">Regions list</div>
+                        <%--<div class="panel panel-default">--%>
+                            <%--<div class="panel-heading">Regions list</div>--%>
                             <!-- Table -->
-                            <table class="table" id="region-list">
-
+                            <table class="table table-striped" id="region-list">
                             </table>
-                        </div>
+                        <%--</div>--%>
                     </div>
                 </div>
 
