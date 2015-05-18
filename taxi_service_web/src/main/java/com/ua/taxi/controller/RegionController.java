@@ -33,4 +33,11 @@ public class RegionController {
         log.info("/addRegion controller");
         return regionService.addRegion(regionName);
     }
+
+    @RequestMapping(value = "/editRegion", method = RequestMethod.GET)
+    public @ResponseBody String editRegion(@ModelAttribute Operator operator, @RequestParam String regionName, @RequestParam String regionId) {
+        log.info("/editRegion controller");
+        return regionService.editRegion(regionName, regionId) ? "true":"false";
+    }
+
 }

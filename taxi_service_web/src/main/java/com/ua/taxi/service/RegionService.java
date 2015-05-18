@@ -11,4 +11,5 @@ public interface RegionService {
 
     List<Region> getRegions();
     boolean addRegion(String regionName);
+    boolean editRegion(String regionName, String regionId);
 }

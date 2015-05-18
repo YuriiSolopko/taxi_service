@@ -28,4 +28,17 @@ public class RegionServiceImpl implements RegionService {
     public boolean addRegion(String regionName) {
         return regionDao.create(new Region(regionName)) == null ? false : true;
     }
+
+    @Override
+    public boolean editRegion(String regionName, String regionId) {
+        try {
+            Long id = Long.parseLong(regionId);
+            Region region = regionDao.read(id);
+            region.setRegionName(regionName);
+            regionDao.update(region);
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
+    }
 }

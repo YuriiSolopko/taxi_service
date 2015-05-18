@@ -30,7 +30,6 @@ public class RegionDaoImpl implements RegionDao{
     @Override
     public void update(Region region) {
         sessionFactory.getCurrentSession().update(region);
-
     }
 
     @Override

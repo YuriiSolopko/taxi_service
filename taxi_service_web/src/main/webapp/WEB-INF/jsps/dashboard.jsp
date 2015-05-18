@@ -125,6 +125,24 @@
         </div>
     </div>
 
+    <div class="modal fade" id="region-delete">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal">&times;</button>
+                    <h4>Confirm operation</h4>
+                </div>
+                <div class="modal-body" id="region-delete-body">
+                    <p>Are you sure you want to delete this region</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default">Yes</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="/js/jquery-1.11.2.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
