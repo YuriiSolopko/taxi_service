@@ -5,4 +5,6 @@ opensource project(in progress)<br>
 Description (for current state):<br>
 This project implements MVC pattern via Spring framework<br>
 DAO classes written with the use of Hibernate framework<br>
-Main web page written with the use of Bootstrap and jQuery frameworks, with function to register new taxi service's operator<br>
+Web UI written with the use of Bootstrap and jQuery frameworks<br>
+Main page functions: Register new taxi service's operator, authenticate operator(AJAX)<br>
+Dashboard functions: Add new region, show list of regions(JSON, AJAX)<br>
